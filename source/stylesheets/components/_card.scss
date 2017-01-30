@@ -4,57 +4,54 @@
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card {
-    height: 250px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    color: white;
-    position: relative;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.card:hover {
-    opacity: 0.8;
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  &:hover {
+  opacity: 0.8;
+  }
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .card-category {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
 }
 
 .card-description {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 20px;
-}
-
-.card-description h2 {
-    font-size: 22px;
-}
-
-.card-description p {
-    font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  h2 {
+  font-size: 22px;
+  }
+  p {
+  font-size: 16px;
+  }
 }
 
 .card-user {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
 }
