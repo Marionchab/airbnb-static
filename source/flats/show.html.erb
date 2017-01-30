@@ -1,0 +1,104 @@
+
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="banner" style="background: url('<%= image_path flat.picture%>'); height: 50vh; background-position: center"></div>
+
+<div class="header-flat">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="header-flat-details">
+          <div class="header-flat-owner  text-center">
+            <%= image_tag flat.owner_picture, class: "img-circle avatar-large" %>
+            <p><strong><%= flat.owner_name %></strong> </p>
+          </div>
+          <div class="header-flat-name">
+            <h3><%= flat.summary %></h3>
+            <p><%= flat.city %></p>
+            <i class="fa fa-star" style="color: #ffb400"></i>
+            <i class="fa fa-star" style="color: #ffb400"></i>
+            <i class="fa fa-star" style="color: #ffb400"></i>
+            <i class="fa fa-star" style="color: #ffb400"></i>
+            <i class="fa fa-star" style="color: #cacccd"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <form action="#" >
+          <h4>Book this flat</h3>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkin" id="checkin">
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkout">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <select name="" id="guests" class="form-control">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="flat-description">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>About this flat</h2>
+        <p>
+          This place <%= flat.maximum_guests %> people (<%= flat.bedrooms %> bedroom(s)) it is located in the city center, in a calm traditional residential area near <%= flat.city %>'s main Avenue !
+        </p>
+
+        <hr>
+        <div class="row" id="flat-data">
+          <div class="col-xs-12 col-sm-2">
+            <strong>The Space</strong>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>Max guests: <strong><%=flat.maximum_guests%></strong></li>
+              <li>Bathroom: <strong><%=flat.bathroom%></strong></li>
+              <li>Bedrooms: <strong><%=flat.bedrooms%></strong></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>Property type: <strong><%=flat.property_type%></strong></li>
+              <li>Room Type: <strong><%=flat.room_type%></strong></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row" id="flat-data">
+          <div class="col-xs-12 col-sm-2">
+            <strong>Amenities</strong>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li><i class="fa fa-cutlery"></i><strong> Kitchen</strong></li>
+              <li><i class="fa fa-wifi"></i><strong><%flat.room_type%> Wifi</strong></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li><i class="fa fa-desktop"></i><strong> TV</strong></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
